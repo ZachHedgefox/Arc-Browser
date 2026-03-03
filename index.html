@@ -1,0 +1,29 @@
+<!-- Desktop Background -->
+<div id="desktop">
+  <!-- Iconic Windows Games -->
+  <div class="icon" onclick="openApp('Solitaire')">🃏 Solitaire</div>
+  <div class="icon" onclick="openApp('Minesweeper')">💣 Minesweeper</div>
+
+  <!-- Arc Browser Window -->
+  <div id="arc-window" class="window hidden">
+    <div class="title-bar">
+      <span>Arc Browser</span>
+      <div class="controls">
+        <button onclick="minimizeApp()">—</button>
+        <button onclick="toggleFullScreen()">▢</button>
+        <button onclick="closeApp()">✕</button>
+      </div>
+    </div>
+    <div class="sidebar">
+      <input type="text" id="url-bar" placeholder="Search or enter URL" onkeydown="if(event.key==='Enter') loadURL()">
+      <div class="tab">New Tab</div>
+    </div>
+    <iframe id="web-embedder" src="about:blank"></iframe>
+  </div>
+</div>
+
+<!-- Windows 11 Taskbar -->
+<div id="taskbar">
+  <div class="start-btn">🪟</div>
+  <div class="task-icon" onclick="openApp('Arc')">🌐</div>
+</div>
